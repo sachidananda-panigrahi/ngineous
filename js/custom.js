@@ -12,7 +12,7 @@ function headerFix(){
 }
 //Click Scroll
 function sectionScroll(){
-    $( '.mainNav > li > a' ).on('click', function(event) {
+    $( '.mainNav > li > a, .roundedMenu li a' ).on('click', function(event) {
         event.preventDefault();
         var target = "#" + $(this).data('href');
         $('html, body').animate({
@@ -23,30 +23,36 @@ function sectionScroll(){
 //Active Nav
 function getActiveSection(){
     var navBar = $('.staticNav');
+    var mainNav = $('.mainNav');
     navBar.removeClass("fixedNav");
     $('.mainNav li').removeClass('active');
+    mainNav.hide();
     var winScrollPos = $(window).scrollTop();
-    console.log(winScrollPos);
-    console.log($('#contactSec').offset().top );
+
     if($('#howItWork').offset().top <= winScrollPos && winScrollPos < $('#aboutSec').offset().top)
     {
         $('.mainNav li:nth-child(1)').addClass('active');
         navBar.addClass("fixedNav");
+        mainNav.show();
+
     }
     else if($('#aboutSec').offset().top <= winScrollPos && winScrollPos < $('#subscription').offset().top)
     {
         $('.mainNav li:nth-child(2)').addClass('active');
         navBar.addClass("fixedNav");
+        mainNav.show();
     }
     else if($('#subscription').offset().top <= winScrollPos && winScrollPos < $('#contactSec').offset().top)
     {
         $('.mainNav li:nth-child(3)').addClass('active');
         navBar.addClass("fixedNav");
+        mainNav.show();
     }
     else if($('#contactSec').offset().top <= winScrollPos )
     {
-            $('.mainNav li:nth-child(4)').addClass('active');
-            navBar.addClass("fixedNav");
+        $('.mainNav li:nth-child(4)').addClass('active');
+        navBar.addClass("fixedNav");
+        mainNav.show();
     }
 
 
