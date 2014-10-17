@@ -615,13 +615,12 @@ ul{
 }
 .innerCnt {
     display: table;
-    width: 100%;
     text-align: center;
-    height: 100%;
     max-width: 370px;
+    margin: 0 auto
 }
 .contactDetCont{
-    width: 370px;
+
     text-align: center;
     display: table-cell;
     vertical-align: middle;

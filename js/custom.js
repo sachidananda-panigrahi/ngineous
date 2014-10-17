@@ -1,7 +1,8 @@
 function sectionHeight(){
     var height = $(window).height();
-    $('.mainWrap section').css({'min-height': height});
-    $('.howItWorksDetSec').css({'min-height': height-50});
+    $('.mainWrap section').css({'min-height': height-49});
+    $('.mainWrap .landing').css({'min-height': height});
+    $('.howItWorksDetSec, .innerCnt').css({'height': height-49});
 
 }
 function headerFix(){
@@ -29,7 +30,7 @@ function sectionScroll(){
         event.preventDefault();
         var target = "#" + $(this).data('href');
         $('html, body').animate({
-            scrollTop: $(target).offset().top
+            scrollTop: $(target).offset().top - 49
         }, 1000);
     });
 }
