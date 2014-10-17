@@ -354,28 +354,30 @@ ul{
     background: #11cccc;
 }
 .howItWorkDet{
-    position: absolute;
-    display: inline-block;
-    left: 50%;
-    margin-left: -520px;
-    top: 50%;
-    margin-top: -41px;
     max-width: 1040px;
     width: 100%;
+    position: relative;
+    display: table-cell;
+    vertical-align: middle;
 }
 .howItWorksDetSec{
     position: relative;
     height: calc(100vh - 50px);
+    display: table;
+    width: 100%;
+    text-align: center
 }
 .buyConnCollView{
     display: inline-block;
     position: relative;
-    top: -52px;
+    width: 1040px;
 }
 .buyConnCollView > li{
     float: left;
     width: 185px;
     margin-left: 100px;
+    position: relative;
+
 }
 .buyConnCollView > li:first-child{
     margin-left: 0;
@@ -410,11 +412,15 @@ ul{
     font-size: 15px;
     line-height: 24px;
 }
-.whiteBorder{
+.buyConnCollView:before {
+    background: none repeat scroll 0 0 #70e0e0;
+    left: 10%;
     min-height: 1px;
-    background: #70e0e0;
+    position: absolute;
+    top: 51px;
     width: 80%;
-    margin: 0 auto;
+    display: block;
+    content: " ";
 }
 /*==================== About Section ====================*/
 .aboutSec{
@@ -646,6 +652,12 @@ ul{
         margin-left: 30px;
         margin-top: 5px;
     }
+    .buyConnCollView > li {
+        margin-left: 40px;
+    }
+    .buyConnCollView {
+        width: 860px
+    }
 }
 @media (min-width: 768px) and (max-width: 979px) {
     .container{
@@ -676,6 +688,13 @@ ul{
     .weAreNgDetCont {
         margin-top: 30px;
     }
+    .buyConnCollView > li {
+        margin-left: 0;
+        transform: scale(0.8);
+    }
+    .buyConnCollView {
+        width: 740px;
+    }
 }
 @media (max-width: 767px) {
     .container{
@@ -687,6 +706,7 @@ ul{
     }
     .weAreNgDet {
         margin-left: 0;
+        max-width: 100%;
     }
     .profileDet > li {
         float: none;
@@ -694,5 +714,32 @@ ul{
     }
     .profileDet {
         width: auto;
+    }
+    .buyConnCollView{
+        width: 300px;
+        margin: 0 auto
+    }
+    .buyConnCollView span,
+    .buyConnCollView i {
+        display: table-cell;
+        vertical-align: middle;
+    }
+    .buyConnCollView span {
+        padding-left: 30px;
+        text-align: left
+    }
+    .buyConnCollView > li {
+        width: auto;
+        float: none;
+        padding: 10px 0;
+    }
+    .buyConnCollView a {
+        display: table;
+        width: 100%;
+    }
+    .buyConnCollView:before {
+        min-height: 80%;
+        left: 71px;
+        width: 1px;
     }
 }
