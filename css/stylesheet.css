@@ -430,9 +430,7 @@ ul{
 }
 .weAreNgDet{
     max-width: 600px;
-    width: 100%;
-    margin-left: 120px;
-    float: left;
+    margin-left: 370px;
 }
 .weAreNgDet h4{
     font-size: 24px;
@@ -447,19 +445,22 @@ ul{
 }
 .weAreNgDetCont {
     margin-top: 95px;
-    margin-bottom: 190px;
 }
 .profileDet{
-    display: table;
     margin: 0 auto;
+    padding-bottom: 50px;
+    width: 984px
 }
 .profileDet > li{
     float: left;
-    width: 245px;
+    width: 234px;
     border-right: 1px solid #e5e5e5;
+    border-left: 1px solid #e5e5e5;
     border-bottom: 1px solid #e5e5e5;
     text-align: center;
     position: relative;
+    margin-top: 190px;
+    margin-left: -1px;
 }
 .profileDet > li:first-child{
     border-left: 1px solid #e5e5e5;
@@ -629,6 +630,9 @@ ul{
     .container{
         width: 1170px;
     }
+    .profileDet > li {
+        width: 245px;
+    }
 }
 @media (max-width: 1199px) {
     .logo{
@@ -657,9 +661,38 @@ ul{
         line-height: 15px;
         padding: 10px 5px;
     }
+    .weAreNg {
+        width: 180px;
+    }
+    .weAreNgDet {
+        margin-left: 240px;
+    }
+    .profileDet {
+        width: 492px;
+    }
+    .container {
+        padding: 0 20px;
+    }
+    .weAreNgDetCont {
+        margin-top: 30px;
+    }
 }
 @media (max-width: 767px) {
     .container{
+        width: auto;
+    }
+    .weAreNg {
+        float: none;
+        margin: 0 auto 20px;
+    }
+    .weAreNgDet {
+        margin-left: 0;
+    }
+    .profileDet > li {
+        float: none;
+        margin: 190px auto 0;
+    }
+    .profileDet {
         width: auto;
     }
 }
