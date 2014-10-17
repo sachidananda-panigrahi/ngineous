@@ -211,7 +211,22 @@ ul{
 .staticNav .logo{
     margin-top: 8px;
 }
-
+.responsiveMenu{
+    cursor: pointer;
+    display: inline-block;
+    margin-top: 12px;
+    width: 30px;
+    float: right;
+}
+.responsiveMenu i{
+    display: block;
+    min-height: 3px;
+    background: #ffffff;
+    margin-top: 5px;
+}
+.responsiveMenu i:first-child{
+    margin-top: 0;
+}
 /*==================== Landing Page ====================*/
 .landing{
     background: url("../images/bgImage1.jpg") no-repeat;
@@ -365,7 +380,6 @@ ul{
 }
 .howItWorksDetSec{
     position: relative;
-    height: calc(100vh - 50px);
 }
 .buyConnCollView{
     display: inline-block;
@@ -678,6 +692,37 @@ ul{
     }
 }
 @media (max-width: 767px) {
+    .responsiveMenu{
+        display: block;
+    }
+    .menu{
+        display: none;
+        text-align: center;
+    }
+    .logo,.mainNav,.mainNav > li{
+        float: none;
+    }
+    .mainNav{
+        margin-left: 0;
+        text-align: center;
+    }
+    .socIcons{
+        float: none;
+        margin-bottom: 7px;
+        clear: both;
+        display: inline-block;
+    }
+    .socIcons:after,.socIcons:before{
+        clear: both;
+    }
+    .mainNav a{
+        display: block;
+        text-align: center;
+    }
+    .mainNav > li {
+        margin-left: 0;
+        border-bottom: 1px solid #e5e5e5;
+    }
     .container{
         width: auto;
     }

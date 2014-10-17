@@ -1,6 +1,7 @@
 function sectionHeight(){
     var height = $(window).height();
     $('.mainWrap section').css({'min-height': height});
+    $('.howItWorksDetSec').css({'min-height': height-50});
 
 }
 function headerFix(){
