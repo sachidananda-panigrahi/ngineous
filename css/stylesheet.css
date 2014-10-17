@@ -213,7 +213,7 @@ ul{
 }
 .responsiveMenu{
     cursor: pointer;
-    display: inline-block;
+    display: none;
     margin-top: 12px;
     width: 30px;
     float: right;
