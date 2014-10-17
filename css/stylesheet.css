@@ -788,4 +788,25 @@ ul{
         left: 71px;
         width: 1px;
     }
+    .roundedMenu {
+        margin-left: -230px;
+    }
+    .roundedMenu > li {
+        margin-left: 20px;
+    }
+}
+@media (max-width: 480px) {
+    .roundedMenu > li {
+        margin-left: 0;
+        float: none;
+        display: table-cell;
+    }
+    .roundedMenu {
+        width: 100%;
+        display: table;
+        text-align: center;
+        position: static;
+        margin-left: -20px;
+        padding: 20px 0;
+    }
 }
