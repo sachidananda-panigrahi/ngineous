@@ -42,7 +42,7 @@ function getActiveSection(){
     var mainNav = $('.mainNav');
     navBar.removeClass("fixedNav");
     $('.mainNav li').removeClass('active');
-    if(width > 768){
+    if(width >= 768){
         mainNav.hide();
     }
     var winScrollPos = $(window).scrollTop();
@@ -54,7 +54,7 @@ function getActiveSection(){
     {
         $('.mainNav li:nth-child(1)').addClass('active');
         navBar.addClass("fixedNav");
-        if(width > 768){
+        if(width >= 768){
             mainNav.show();
         }
 
@@ -63,7 +63,7 @@ function getActiveSection(){
     {
         $('.mainNav li:nth-child(2)').addClass('active');
         navBar.addClass("fixedNav");
-        if(width > 768){
+        if(width >= 768){
             mainNav.show();
         }
     }
@@ -71,7 +71,7 @@ function getActiveSection(){
     {
         $('.mainNav li:nth-child(3)').addClass('active');
         navBar.addClass("fixedNav");
-        if(width > 768){
+        if(width >= 768){
             mainNav.show();
         }
     }
@@ -79,7 +79,7 @@ function getActiveSection(){
     {
         $('.mainNav li:nth-child(4)').addClass('active');
         navBar.addClass("fixedNav");
-        if(width > 768){
+        if(width >= 768){
             mainNav.show();
         }
     }
