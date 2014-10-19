@@ -6,7 +6,7 @@ function sectionHeight(){
 
 }
 function headerFix(){
-
+    getActiveSection();
     $(document).on("scroll", function () {
         getActiveSection();
 
@@ -16,8 +16,8 @@ function headerFix(){
 function navClick(){
     $(".responsiveMenu, .hideOnclick a").on('click',function(event){
         event.stopImmediatePropagation();
-//        alert('hi')
         if($(".menu").css('display') == 'none'){
+
             $(".menu").slideDown();
         }
         else{
@@ -44,6 +44,8 @@ function getActiveSection(){
     $('.mainNav li').removeClass('active');
     if(width >= 768){
         mainNav.hide();
+
+
     }
     var winScrollPos = $(window).scrollTop();
     winScrollPos = winScrollPos + 49;
@@ -56,6 +58,7 @@ function getActiveSection(){
         navBar.addClass("fixedNav");
         if(width >= 768){
             mainNav.show();
+
         }
 
     }
@@ -65,6 +68,7 @@ function getActiveSection(){
         navBar.addClass("fixedNav");
         if(width >= 768){
             mainNav.show();
+
         }
     }
     else if($('#subscription').offset().top <= winScrollPos && winScrollPos < $('#contactSec').offset().top)
@@ -73,6 +77,7 @@ function getActiveSection(){
         navBar.addClass("fixedNav");
         if(width >= 768){
             mainNav.show();
+
         }
     }
     else if($('#contactSec').offset().top <= winScrollPos )
@@ -81,6 +86,7 @@ function getActiveSection(){
         navBar.addClass("fixedNav");
         if(width >= 768){
             mainNav.show();
+
         }
     }
 
@@ -91,8 +97,14 @@ function belowIpadSection(){
     var width = $(window).width();
     if(width < 768)
     {
-        $('.mainNav').addClass('hideOnclick');
+        $('.menu').css({'display': 'none'});
+        $('.mainNav').addClass('hideOnclick').show();
         navClick();
+
+    }
+    else{
+        $('.mainNav').removeClass('hideOnclick');
+        $('.menu').css({'display': 'block'});
     }
 }
 
