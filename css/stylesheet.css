@@ -681,6 +681,9 @@ ul{
     .weAreNgDetCont{
         margin-top: 60px;
     }
+    .roundedMenu{
+        bottom: 30px;
+    }
 }
 @media (max-width: 767px) {
    .staticNav{
@@ -771,7 +774,14 @@ ul{
     .roundedMenu > li {
         margin-left: 20px;
     }
-
+    .landing h1{
+        font-size: 40px;
+        line-height: 45px;
+        margin-bottom: 10px;
+    }
+    .roundedMenu{
+        bottom: 10px;
+    }
 }
 
 @media (max-width: 568px)  {
@@ -830,15 +840,15 @@ ul{
 @media (min-width: 568px) and  (min-height: 360px) {
     .roundedMenu{
         display: block;
-        bottom: 15px;
     }
-    .landing h1{
-        font-size: 40px;
-        line-height: 45px;
-    }
+
 
 }
 @media (max-width: 640px) and  (max-height: 360px) {
+
+    .roundedMenu{
+        bottom: 5px;
+    }
     .buyConnCollView:before {
        left: 10%;
        min-height: 1px;
